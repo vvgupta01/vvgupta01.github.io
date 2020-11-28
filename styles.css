@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+
+    cursor: none;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.single-page {
+    overflow-y: hidden;
+    text-transform: uppercase;
+}
+
+#cursor {
+    width: 50px; height: 50px;
+    border: 1px solid gray; border-radius: 50%;
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    transition: width, height, border-color;
+    transition-duration: 0.5s; transition-timing-function: ease-out;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#cursor.select {
+    border-color: crimson;
+}
+
+a {
+    cursor: none;
+    text-decoration: none;
+}
+
+.load-forwards {
+    opacity: 0;
+    animation: fadeIn-forwards 1s ease-out forwards;
+    animation-delay: 4s;
+}
+
+.load-backwards {
+    opacity: 0;
+    animation: fadeIn-backwards 1s ease-out forwards;
+    animation-delay: 4s;
+}
+
+.fadeIn-forwards {
+    animation: fadeIn-forwards 0.5s ease-out forwards;
+}
+
+.fadeIn-backwards {
+    animation: fadeIn-backwards 0.5s ease-out forwards;
+}
+
+.fadeOut-forwards {
+    animation: fadeOut-forwards 0.5s ease-out forwards;
+}
+
+.fadeOut-backwards {
+    animation: fadeOut-backwards 0.5s ease-out forwards;
+}
+
+.crimson-text {
+    color: crimson;
+    font-weight: bold;
+}
+
+#background {
+    width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) #111111;
+    transform: translateX(-100vw);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav li {
+     margin: 0 50px;
+}
+
+.link {
+    padding-bottom: 10px;
+    position: relative;
+
+    color: darkgray;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link.active {
+    color: white;
+    pointer-events: none;
+}
+
+.link:hover, #side-container a:hover {
+    color: whitesmoke;
+}
+
+.link span {
+    width: 0; height: 2px;
+    bottom: 0; right: 0;
+    position: absolute;
+
+    border-radius: 10px;
+    background-color: crimson;
+    transition: all 0.5s ease-out;
+}
+
+.link.active span, .link:hover span {
+    width: 50%;
+}
+
+#logo-text {
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+#logo-text span {
+    left: 0;
+    position: relative;
+    transition: 0.5s ease-out;
+}
+
+#logo-text:hover span {
+    left: 10px;
+}
+
+
+#side-container {
+    height: 100%;
+    right: 0; top: 0;
+    position: absolute;
+
+    display: flex; flex-direction: column;
+    justify-content: center;
+}
+
+#side-container ul {
+    padding: 0 20px;
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#side-container li {
+    margin: 20px 0;
+}
+
+#side-container a {
+    color: darkgray;
+    transition: 0.5s ease-out;
+    writing-mode: vertical-lr;
+}
+
+
+#home-container, #about-container, #blog-container {
+    top: 30vh; left: 10vw;
+    position: absolute;
+}
+
+#about-container, #blog-container {
+    opacity: 0;
+}
+
+#about-main-container, #blog-container {
+    border-left: 5px solid crimson;
+    padding-left: 20px;
+}
+
+.container-title {
+    font-size: 32px;
+}
+
+#about-me {
+    padding-top: 10px;
+    width: 300px;
+}
+
+#contact {
+    padding-top: 20px;
+}
+
+#contact a {
+    color: lightgray;
+}
+
+#contact a:hover {
+    color: whitesmoke;
+}
+
+#greeting {
+    padding-left: 20px;
+
+    font-size: 64px;
+    border-left: 5px solid crimson;
+    animation-delay: 1s;
+}
+
+#intro {
+    animation-delay: 2.5s;
+}
+
+#about {
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+#link-container {
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+#link-container a {
+    margin-right: 50px;
+}
+
+#featured-container {
+    position: absolute;
+    top: 30vh; left: 70vw;
+
+    color: whitesmoke;
+}
+
+#featured-container .crimson-text {
+    font-size: 24px;
+}
+
+#features {
+    padding-top: 20px;
+    width: 300px;
+}
+
+#feature-bar {
+    height: 5px;
+    margin-top: 10px;
+    left: 0;
+    position: relative;
+
+    border-radius: 20px;
+    background-color: crimson;
+    transition: 1s ease-out;
+}
+
+.feature-button {
+    font-size: 24px;
+    padding: 10px;
+
+    color: whitesmoke;
+    transition: 0.5s ease-out;
+}
+
+.feature-button:hover, .featured-item a:hover {
+    color: crimson;
+}
+
+.featured-item {
+    position: absolute;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+}
+
+.featured-item.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.featured-item a {
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke;
+    transition: 0.5s ease-out;
+}
+
+.featured-item div {
+    padding-top: 10px;
+    color: darkgray;
+}
+
+
+footer {
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0;
+    position: absolute;
+
+    color: gray;
+    text-align: center;
+}
+
+#policy-title {
+    width: 100vw; height: 30vh;
+    display: flex;
+    justify-content: center; align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) #111111;
+
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#policy .header {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 0 10px 0;
+}
+
+#policy p, #policy ol {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#policy ol {
+    padding: 10px 0 0 100px;
+}
+
+#policy a {
+    text-transform: none;
+    text-decoration: underline;
+
+    color: black;
+    font-weight: bold;
+}
+
+@keyframes slideIn {
+    from {}
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn-forwards {
+    from {
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn-backwards {
+    from {
+        opacity: 0;
+        transform: translateX(5vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeOut-forwards {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(5vw);
+    }
+}
+
+@keyframes fadeOut-backwards {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+}

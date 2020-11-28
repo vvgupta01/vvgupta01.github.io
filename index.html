@@ -1,6 +1,133 @@
 <!DOCTYPE html>
+<html lang="en-US">
+
 <head>
-  <title>Vaibhav Gupta | Home</title>
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vaibhav Gupta">
+    <title>Vaibhav Gupta | Home</title>
+
+    <link href="assets/logo.png" rel="shortcut icon" type="image/png">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-  
+
+<body class="single-page">
+    <svg id="cursor"></svg>
+
+    <div id="background">
+        <nav>
+            <a id="logo-text" class="load-forwards" href="">Vaibhav &nbsp<span class="crimson-text">Gupta</span></a>
+
+            <ul class="load-backwards" style="display: flex; list-style: none;">
+                <li><span class="link active">Home<span></span></span></li>
+                <li><span class="link">Blog<span></span></span></li>
+                <li><span class="link">About Me<span></span></span></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="side-container" class="load-backwards">
+        <ul>
+            <li><a href="https://github.com/vvgupta01" target="_blank">GitHub</a></li>
+            <li><a href="https://play.google.com/store/apps/dev?id=5985044397596359560" target="_blank">Google Play</a></li>
+            <li><a href="policy" target="_blank">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <div id="home-container">
+        <div id="greeting" class="load-forwards">
+            <div class="crimson-text">Hello.</div>
+            <div id="intro" class="load-forwards">I am &nbsp;<span class="crimson-text">Vaibhav.</span></div>
+        </div>
+        <div id="about" class="load-forwards">Programmer | Developer | Engineer</div>
+
+        <div id="link-container" class="load-forwards">
+            <a href="https://github.com/vvgupta01" target="_blank"><img src="assets/github-logo.png" alt="Github"></a>
+            <a href="https://play.google.com/store/apps/dev?id=5985044397596359560" target="_blank"><img src="assets/gp-logo.png" alt="Google Play"></a>
+            <a href="https://www.linkedin.com/in/vvgupta01/" target="_blank"><img src="assets/linkedin-logo.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+
+    <div id="about-container">
+        <div id="about-main-container">
+            <div class="container-title">
+                <span class="crimson-text">About Me</span>
+            </div>
+
+            <div id="about-me">
+                I am a sophomore studying computer science at the
+                University of Illinois at Urbana-Champaign.
+                <br><br>
+                I am a curious student motivated by minimalism and optimization to implement
+                machine learning solutions that can automate daily operations and maximize
+                technological efficiency.
+            </div>
+        </div>
+
+        <div id="contact">
+            <span class="crimson-text">Contact:&nbsp</span>
+            <a href="mailto: vaibhav7@illinois.edu">vaibhav7@illinois.edu</a>
+        </div>
+    </div>
+
+    <div id="blog-container">
+        <div class="container-title">
+            <span class="crimson-text">Coming Soon...</span>
+        </div>
+    </div>
+
+    <div id="featured-container" class="load-backwards">
+        <div id="feature-progress">
+            <span class="feature-button"><</span>
+            <span id="current-item" class="crimson-text">01</span>
+            <span id="items-max"></span>
+            <span class="feature-button">></span>
+        </div>
+        <div id="feature-bar"></div>
+
+        <div id="features">
+            <div class="featured-item">
+                <a href="https://github.com/vvgupta01/Nim-QLearning" target="_blank">Nim Q-Learning</a>
+                <div>
+                    Research paper of developing, training, and testing a reinforcement learning model
+                    that learned to play the game of Nim optimally through self-play.
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <a href="https://github.com/vvgupta01/Amazon-Bot" target="_blank">Amazon Bot</a>
+                <div>
+                    Automated web scraper that queries and tracks Amazon product information
+                    through the Windows command-line interface.
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <a href="https://github.com/vvgupta01/Face-Classifier" target="_blank">Face Classifier</a>
+                <div>
+                    Program that recognizes faces and trains various models to classify individual faces
+                    in images and videos using OpenCV.
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <a href="https://github.com/vvgupta01/Database-Manager" target="_blank">Database Manager</a>
+                <div>
+                    Regression modeling, statistical analysis, and data visualization of sample employee
+                    records managed within a SQL database that can be queried and modified.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="load-forwards"></footer>
+
+    <script src="scripts/home.js"></script>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/cursor.js"></script>
+</body>
+</html>
+
