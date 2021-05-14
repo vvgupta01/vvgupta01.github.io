@@ -7,51 +7,112 @@
     <meta name="author" content="Vaibhav Gupta">
     <title>Vaibhav Gupta | Home</title>
 
-    <link href="assets/logo.png" rel="shortcut icon" type="image/png">
+    <link href="assets/favicon.png" rel="shortcut icon" type="image/png">
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body class="single-page">
-    <svg id="cursor"></svg>
+<body id="main-body">
+    <svg id="cursor" class="hidden"></svg>
 
     <div id="background">
         <nav>
-            <a id="logo-text" class="load-forwards" href="">Vaibhav &nbsp<span class="crimson-text">Gupta</span></a>
+            <div id="logo" class="fade-left"><img src="assets/logo.png" alt="Vaibhav Gupta" width="96" height="96">
+                <a id="logo-text" class="short-fade" href="">Vaibhav &nbsp;<span class="crimson-text">Gupta</span></a>
+            </div>
 
-            <ul class="load-backwards" style="display: flex; list-style: none;">
+            <ul id="navbar" class="fade-right">
                 <li><span class="link active">Home<span></span></span></li>
-                <li><span class="link">Blog<span></span></span></li>
                 <li><span class="link">About Me<span></span></span></li>
             </ul>
         </nav>
     </div>
 
-    <div id="side-container" class="load-backwards">
+    <div id="side-container" class="fade-right">
         <ul>
             <li><a href="https://github.com/vvgupta01" target="_blank">GitHub</a></li>
             <li><a href="https://play.google.com/store/apps/dev?id=5985044397596359560" target="_blank">Google Play</a></li>
-            <li><a href="policy" target="_blank">Privacy Policy</a></li>
+            <li><a href="https://www.linkedin.com/in/vvgupta01/" target="_blank">LinkedIn</a></li>
         </ul>
     </div>
 
     <div id="home-container">
-        <div id="greeting" class="load-forwards">
-            <div class="crimson-text">Hello.</div>
-            <div id="intro" class="load-forwards">I am &nbsp;<span class="crimson-text">Vaibhav.</span></div>
-        </div>
-        <div id="about" class="load-forwards">Programmer | Developer | Engineer</div>
+        <div id="greeting" class="fade-left crimson-text">Hello.</div>
+        <div id="intro" class="fade-left">I am &nbsp;<span class="crimson-text">Vaibhav.</span></div>
 
-        <div id="link-container" class="load-forwards">
-            <a href="https://github.com/vvgupta01" target="_blank"><img src="assets/github-logo.png" alt="Github"></a>
-            <a href="https://play.google.com/store/apps/dev?id=5985044397596359560" target="_blank"><img src="assets/gp-logo.png" alt="Google Play"></a>
-            <a href="https://www.linkedin.com/in/vvgupta01/" target="_blank"><img src="assets/linkedin-logo.png" alt="LinkedIn"></a>
+        <div id="link-container" class="fade-left">
+            <a href="https://github.com/vvgupta01" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://play.google.com/store/apps/dev?id=5985044397596359560" target="_blank"><i class="fa fa-google"></i></a>
+            <a href="https://www.linkedin.com/in/vvgupta01/" target="_blank"><i class="fa fa-linkedin"></i></a>
         </div>
     </div>
 
-    <div id="about-container">
+    <div id="feature-container" class="fade-right">
+        <div id="feature-progress">
+            <div>
+                <span id="current-item" class="crimson-text">01</span>
+                <span id="items-max"></span>
+            </div>
+
+            <div id="progress-blocks">
+                <div class="progress-block"></div>
+                <div class="progress-block"></div>
+                <div class="progress-block"></div>
+                <div class="progress-block"></div>
+                <div class="progress-block"></div>
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <a href="https://github.com/vvgupta01/airport-graph" target="_blank">Airport Graph</a>
+            <i class="fa fa-long-arrow-right short-fade"></i>
+            <div>
+                Models domestic U.S. airports and flights using open-source datasets. Implements algorithms to find
+                the shortest paths between airports, through airports, and airport connectivity/centrality.
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <a href="https://github.com/vvgupta01/maze-traversal" target="_blank">Maze Traversal</a>
+            <i class="fa fa-long-arrow-right short-fade"></i>
+            <div>
+                Generates random acyclic rectangular mazes using disjoint sets and finds various solutions using
+                BFS/DFS traversals. Visualizes searches and solutions using animations.
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <a href="https://github.com/vvgupta01/mosaic-tree" target="_blank">Mosaic Tree</a>
+            <i class="fa fa-long-arrow-right short-fade"></i>
+            <div>
+                Implements recursive NNS on 3-dimensional k-d trees to convert images to tile mosaics by mapping
+                each region of the original image to the tile with the closest color.
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <a href="https://github.com/vvgupta01/nim-qlearning" target="_blank">Nim Q-Learning</a>
+            <i class="fa fa-long-arrow-right short-fade"></i>
+            <div>
+                Research paper of developing, training, and testing a reinforcement learning model
+                with various parameters that can learn to play the game of Nim optimally through self-play.
+            </div>
+        </div>
+
+        <div class="featured-item">
+            <a href="https://github.com/vvgupta01/amazon-bot" target="_blank">Amazon Bot</a>
+            <i class="fa fa-long-arrow-right short-fade"></i>
+            <div>
+                Automated web scraper that queries and tracks Amazon product information
+                through the Windows command-line interface.
+            </div>
+        </div>
+    </div>
+
+    <div id="about-container" class="fade-left">
         <div id="about-main-container">
             <div class="container-title">
                 <span class="crimson-text">About Me</span>
@@ -61,9 +122,9 @@
                 I am a sophomore studying computer science at the
                 University of Illinois at Urbana-Champaign.
                 <br><br>
-                I am a curious student motivated by minimalism and optimization to implement
-                machine learning solutions that can automate daily operations and maximize
-                technological efficiency.
+                I am a curious student motivated by minimalism and optimization to design
+                machine learning solutions that can automate daily tasks and change how we
+                interact with the world using technology.
             </div>
         </div>
 
@@ -71,59 +132,24 @@
             <span class="crimson-text">Contact:&nbsp</span>
             <a href="mailto: vaibhav7@illinois.edu">vaibhav7@illinois.edu</a>
         </div>
-    </div>
 
-    <div id="blog-container">
-        <div class="container-title">
-            <span class="crimson-text">Coming Soon...</span>
+        <div id="resume">
+            <a class="crimson-text" href="assets/resume.pdf" target="_blank">Resume</a>
+            <i class="fa fa-long-arrow-right short-fade"></i>
         </div>
     </div>
 
-    <div id="featured-container" class="load-backwards">
-        <div id="feature-progress">
-            <span class="feature-button"><</span>
-            <span id="current-item" class="crimson-text">01</span>
-            <span id="items-max"></span>
-            <span class="feature-button">></span>
-        </div>
-        <div id="feature-bar"></div>
-
-        <div id="features">
-            <div class="featured-item">
-                <a href="https://github.com/vvgupta01/Nim-QLearning" target="_blank">Nim Q-Learning</a>
-                <div>
-                    Research paper of developing, training, and testing a reinforcement learning model
-                    that learned to play the game of Nim optimally through self-play.
-                </div>
-            </div>
-
-            <div class="featured-item">
-                <a href="https://github.com/vvgupta01/Amazon-Bot" target="_blank">Amazon Bot</a>
-                <div>
-                    Automated web scraper that queries and tracks Amazon product information
-                    through the Windows command-line interface.
-                </div>
-            </div>
-
-            <div class="featured-item">
-                <a href="https://github.com/vvgupta01/Face-Classifier" target="_blank">Face Classifier</a>
-                <div>
-                    Program that recognizes faces and trains various models to classify individual faces
-                    in images and videos using OpenCV.
-                </div>
-            </div>
-
-            <div class="featured-item">
-                <a href="https://github.com/vvgupta01/Database-Manager" target="_blank">Database Manager</a>
-                <div>
-                    Regression modeling, statistical analysis, and data visualization of sample employee
-                    records managed within a SQL database that can be queried and modified.
-                </div>
-            </div>
-        </div>
+    <div id="quote-container" class="fade-right">
+        <div id="quote-text"></div>
+        <div id="quote-author"></div>
     </div>
 
-    <footer id="footer" class="load-forwards"></footer>
+    <footer id="footer" class="fade-left">
+        <div id="updated">
+            Updated May 2021
+        </div>
+        <div id="copyright"></div>
+    </footer>
 
     <script src="scripts/home.js"></script>
     <script src="scripts/footer.js"></script>
